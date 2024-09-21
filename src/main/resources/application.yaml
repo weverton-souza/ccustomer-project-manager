@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: customer-project-manager
+  main:
+    allow-bean-definition-overriding: true
+
+springdoc:
+  swagger-ui:
+    tags-sorter: alpha
+    operations-sorter: alpha
+    display-request-duration: true
+    enabled: true
+    doc-expansion: none
+  writer-with-order-by-keys: true

@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_URL:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DATABASE:customer-project-database}
+    username: ${POSTGRES_USERNAME:customer-project-user}
+    password: ${POSTGRES_PASSWORD:PIh4Yrv75BLP1SuXY9XU}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+
+application:
+  customer-project-manager:
+    security:
+      token-expiration: 259200000
+      jwt-signing-key: 5Kg6WrL1NsY2ToH4QjXzBa9Dc3Fv7Mu8IpORmSeVtZnCp0yJlUiTIKZ4Q6X1Bbf0

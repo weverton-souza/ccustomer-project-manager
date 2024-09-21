@@ -1,0 +1,34 @@
+# Ignorar arquivos de build do Gradle
+.gradle/
+build/
+out/
+
+# Ignorar arquivos de configuração da IDE
+.idea/
+*.iml
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar arquivos de cache
+*.class
+*.jar
+*.war
+*.ear
+
+# Ignorar arquivos temporários do sistema
+*.tmp
+*.swp
+*.DS_Store
+Thumbs.db
+
+# Ignorar arquivos relacionados ao Git
+.git/
+.gitignore
+
+# Ignorar Dockerfiles locais e arquivos de configuração do Docker Compose
+Dockerfile*
+docker-compose*.yml
+
+# Ignorar arquivos de configuração de testes
+test-output/
