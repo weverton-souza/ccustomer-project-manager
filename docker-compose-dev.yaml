@@ -28,15 +28,18 @@ services:
     volumes:
       - ./data/postgres:/var/lib/postgresql/data
 
-#  customer-project-backend:
-#    container_name: customer-project-backend
-#    depends_on:
-#      postgres-service:
-#        condition: service_healthy
-#    networks:
-#      customer-project-network:
-#        aliases:
-#          - customer-project-network.customer
-#    ports:
-#      - '8080:8080'
-#    restart: unless-stopped
+  customer-project-backend:
+    container_name: customer-project-backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      postgres-service:
+        condition: service_healthy
+    networks:
+      customer-project-network:
+        aliases:
+          - customer-project-network.customer
+    ports:
+      - '8080:8080'
+    restart: unless-stopped
